@@ -152,6 +152,102 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-PID算法d分享" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/06/15/PID%E7%AE%97%E6%B3%95d%E5%88%86%E4%BA%AB/">PID算法d分享</a>
+    </h1>
+  
+
+        
+        <a href="/2023/06/15/PID%E7%AE%97%E6%B3%95d%E5%88%86%E4%BA%AB/" class="archive-article-date">
+  	<time datetime="2023-06-15T10:32:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-06-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="L¼"><a href="#L¼" class="headerlink" title="Ŀ¼"></a>Ŀ¼</h1><h2 id="1-PID�������۷��������"><a href="#1-PID�������۷��������" class="headerlink" title="1.PID�������۷��������"></a>1.PID�������۷��������</h2><h3 id="����"><a href="#����" class="headerlink" title="����"></a>����</h3><ul>
+<li>(1) ������(P)</li>
+<li>(2) ������(I)</li>
+<li>(3) ΢����(D)</li>
+<li>(4) �������ֿ���(PI)</li>
+</ul>
+<hr>
+<h1 id="1-PID�������۷���"><a href="#1-PID�������۷���" class="headerlink" title="1.PID�������۷���"></a>1.PID�������۷���</h1><h2 id="����-1"><a href="#����-1" class="headerlink" title="����"></a>����</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">R����֪ϵͳ���趨ֵ��</span><br><span class="line">X��ϵͳ��ʵ�����ֵ��</span><br><span class="line">e��ϵͳ��� = �趨ֵ��R��-ʵ�����ֵ��X����</span><br><span class="line">Kp���������棻</span><br><span class="line">Ki���������棻</span><br><span class="line">Kv��΢�����档</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>����岥һ����Ϣ�Ա�������������ķ��棨simulink�����ȴһ������ϵͳ  </p>
+<p><img src="/image-6.png" alt="Alt text"></p>
+<p>���������ǵķ�����  </p>
+<p><img src="/image-7.png" alt="Alt text"></p>
+<p>�����ǴӶ���ϵͳ��ʱ����з�����ѧ���Զ�����ԭ����ͬѧ�������ɿ��������Ƶ�  </p>
+<p> <img src="/1-2.jpg" alt="Alt text"> </p>
+<p>���Կ������ǵļ�����������������Ǻϡ����Կ�����Ȼ��ϵͳ���ȶ��ģ���̬��ӦҲ���У�������̬���δ����������ǵ��趨ֵ1�в��ٵľ��롣�����������ǿ���PID���Ƶ��׾�������ʲô�£���ϵͳ�з�����ʲô���á�</p>
+<hr>
+<h2 id="1-������-P"><a href="#1-������-P" class="headerlink" title="(1) ������(P)"></a>(1) ������(P)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">e = R - X</span><br><span class="line">e &gt; 0: ����ʵ�����ֵδ���</span><br><span class="line">e = 0: ��������պô��</span><br><span class="line">e &lt; 0: �������������ϵͳ�趨ֵ</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">�������ƿ��ǵ�ǰ�����ֵ��һ����ֵ�ĳ���Kp��ˡ�Kpֻ����ϵͳ����������ɱ�����ʱ��������ٸ����ӣ��յ��������Χ��10-20�棬Ԥ��ֵΪ20�档��������10���ʱ������100%����15���ʱ������50%����18���ʱ������20%���������Ϊ0��Ҳ����20���ʱ������������ʱϵͳ����ʧ��״̬��</span><br><span class="line">�������Ƶ�������£�</span><br><span class="line">                       Pout = Kp*e</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>���˵��뻷�ڵĻ���֮���������Űѱ�������뵽֮ǰ��ϵͳ��ȥ�������ᷢ��ʲô��  </p>
+<p><img src="/image-8.png" alt="Alt text"></p>
+<p>���ķ���������  </p>
+<p><img src="/image-9.png" alt="Alt text">  </p>
+<p>ͬ�ϣ����Ƕ������ʱ�������Ϊ�˱���ƪ��̫����Ҳ�����һ�δ���ҷ�������Ȼ����Ļ������΢����ķ�������һ���ģ��������Ȥ�������м��㣩��  </p>
+<p><img src="/2.jpg" alt="Kp=5">  </p>
+<p>�������뵼���е�ϵͳ��Ƚϻᷢ�ּ��������֮��ϵͳ������ȱ�С������ϵͳ�������������ʱ��Խ�̣���Ƶ�ʱ����Ӧ�ٶ�ҲԽ�졣����ϵͳ���ɴ��ڲ�С����̬������ļ�������֤��  </p>
+<p><img src="/3.jpg" alt="Alt text">  </p>
+<p>�ӽ�������Ǻ�����Կ�������Kp����ϵͳ��̬���Խ��ԽС�����仰˵��ֻҪKp�����㹻����ôϵͳ���յ�����϶�������趨ֵ�����������������������������������£���Kpȡ��ֵͬ�ķ�����  </p>
+<p>Kp &#x3D; 10</p>
+<p><img src="/image-10.png" alt="Alt text"></p>
+<p>kp &#x3D; 100</p>
+<p><img src="/image-11.png" alt="Alt text"> </p>
+<p>Kp &#x3D; 1000 </p>
+<p><img src="/image-12.png" alt="Alt text"> </p>
+<p>������3��ͼ���Կ�������Kp������Խ��Խ�ã�����Kp��������̬������ڱ�С������ϵͳ����Ҳ��֮����������Kp����1000ʱ��ϵͳ�ںܳ���ʱ���ڶ��ȶ����ˣ�һֱ�񵴡�̫����񵴶Ժܶ�ϵͳ��˵�ǲ������ܵģ���������㿪�����ϸ���ʱ������ѳ����ᵽ100KM&#x2F;h�����һ��������ȥֱ��쭵���500KM&#x2F;h����֮�����������ٵ�55KM&#x2F;h���⻹ԶԶû�������㽫�ںܳ�һ��ʱ����ά������״̬�����㳵�ܵ��ˣ��������粻���ˣ�  </p>
+<p>�ܽ᣺Kp����ϵͳ����̬�����С������Ӧʱ��Խ�죬�����ϵͳ������С���񵴡�����Ҫ�õ�һ���ڽ�С�����»�û����̬����ϵͳ����ô���أ�<br>�������˭�ڽ��ң���</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/06/15/PID%E7%AE%97%E6%B3%95d%E5%88%86%E4%BA%AB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-PID控制算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

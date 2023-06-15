@@ -6,15 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023/6 | Hexo</title>
+  <title>PID算法d分享 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2023/06/index.html">
+  <meta name="description" content="Ŀ¼1.PID�������۷������������ (1) ������(P) (2) ������(I) (3) ΢����(D) (4) �������ֿ���(PI)   1.PID�������۷�������1234567R����֪ϵͳ���趨ֵ��X��ϵͳ��ʵ�����ֵ��e��ϵͳ��� &#x3D; �趨ֵ��R��-ʵ�����ֵ��X����Kp���������棻Ki���">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PID算法d分享">
+<meta property="og:url" content="http://example.com/2023/06/15/PID%E7%AE%97%E6%B3%95d%E5%88%86%E4%BA%AB/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Ŀ¼1.PID�������۷������������ (1) ������(P) (2) ������(I) (3) ΢����(D) (4) �������ֿ���(PI)   1.PID�������۷�������1234567R����֪ϵͳ���趨ֵ��X��ϵͳ��ʵ�����ֵ��e��ϵͳ��� &#x3D; �趨ֵ��R��-ʵ�����ֵ��X����Kp���������棻Ki���">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/image-6.png">
+<meta property="og:image" content="http://example.com/image-7.png">
+<meta property="og:image" content="http://example.com/1-2.jpg">
+<meta property="og:image" content="http://example.com/image-8.png">
+<meta property="og:image" content="http://example.com/image-9.png">
+<meta property="og:image" content="http://example.com/2.jpg">
+<meta property="og:image" content="http://example.com/3.jpg">
+<meta property="og:image" content="http://example.com/image-10.png">
+<meta property="og:image" content="http://example.com/image-11.png">
+<meta property="og:image" content="http://example.com/image-12.png">
+<meta property="article:published_time" content="2023-06-15T10:32:12.000Z">
+<meta property="article:modified_time" content="2023-06-15T10:33:42.186Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/image-6.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,97 +165,189 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-PID算法d分享" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      PID算法d分享
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/06/15/PID%E7%AE%97%E6%B3%95d%E5%88%86%E4%BA%AB/" class="archive-article-date">
+
+        
+        <a href="/2023/06/15/PID%E7%AE%97%E6%B3%95d%E5%88%86%E4%BA%AB/" class="archive-article-date">
   	<time datetime="2023-06-15T10:32:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-06-15</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/06/15/PID%E7%AE%97%E6%B3%95d%E5%88%86%E4%BA%AB/">PID算法d分享</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="L¼"><a href="#L¼" class="headerlink" title="Ŀ¼"></a>Ŀ¼</h1><h2 id="1-PID�������۷��������"><a href="#1-PID�������۷��������" class="headerlink" title="1.PID�������۷��������"></a>1.PID�������۷��������</h2><h3 id="����"><a href="#����" class="headerlink" title="����"></a>����</h3><ul>
+<li>(1) ������(P)</li>
+<li>(2) ������(I)</li>
+<li>(3) ΢����(D)</li>
+<li>(4) �������ֿ���(PI)</li>
+</ul>
+<hr>
+<h1 id="1-PID�������۷���"><a href="#1-PID�������۷���" class="headerlink" title="1.PID�������۷���"></a>1.PID�������۷���</h1><h2 id="����-1"><a href="#����-1" class="headerlink" title="����"></a>����</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">R����֪ϵͳ���趨ֵ��</span><br><span class="line">X��ϵͳ��ʵ�����ֵ��</span><br><span class="line">e��ϵͳ��� = �趨ֵ��R��-ʵ�����ֵ��X����</span><br><span class="line">Kp���������棻</span><br><span class="line">Ki���������棻</span><br><span class="line">Kv��΢�����档</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>����岥һ����Ϣ�Ա�������������ķ��棨simulink�����ȴһ������ϵͳ  </p>
+<p><img src="/image-6.png" alt="Alt text"></p>
+<p>���������ǵķ�����  </p>
+<p><img src="/image-7.png" alt="Alt text"></p>
+<p>�����ǴӶ���ϵͳ��ʱ����з�����ѧ���Զ�����ԭ����ͬѧ�������ɿ��������Ƶ�  </p>
+<p> <img src="/1-2.jpg" alt="Alt text"> </p>
+<p>���Կ������ǵļ�����������������Ǻϡ����Կ�����Ȼ��ϵͳ���ȶ��ģ���̬��ӦҲ���У�������̬���δ����������ǵ��趨ֵ1�в��ٵľ��롣�����������ǿ���PID���Ƶ��׾�������ʲô�£���ϵͳ�з�����ʲô���á�</p>
+<hr>
+<h2 id="1-������-P"><a href="#1-������-P" class="headerlink" title="(1) ������(P)"></a>(1) ������(P)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">e = R - X</span><br><span class="line">e &gt; 0: ����ʵ�����ֵδ���</span><br><span class="line">e = 0: ��������պô��</span><br><span class="line">e &lt; 0: �������������ϵͳ�趨ֵ</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">�������ƿ��ǵ�ǰ�����ֵ��һ����ֵ�ĳ���Kp��ˡ�Kpֻ����ϵͳ����������ɱ�����ʱ��������ٸ����ӣ��յ��������Χ��10-20�棬Ԥ��ֵΪ20�档��������10���ʱ������100%����15���ʱ������50%����18���ʱ������20%���������Ϊ0��Ҳ����20���ʱ������������ʱϵͳ����ʧ��״̬��</span><br><span class="line">�������Ƶ�������£�</span><br><span class="line">                       Pout = Kp*e</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>���˵��뻷�ڵĻ���֮���������Űѱ�������뵽֮ǰ��ϵͳ��ȥ�������ᷢ��ʲô��  </p>
+<p><img src="/image-8.png" alt="Alt text"></p>
+<p>���ķ���������  </p>
+<p><img src="/image-9.png" alt="Alt text">  </p>
+<p>ͬ�ϣ����Ƕ������ʱ�������Ϊ�˱���ƪ��̫����Ҳ�����һ�δ���ҷ�������Ȼ����Ļ������΢����ķ�������һ���ģ��������Ȥ�������м��㣩��  </p>
+<p><img src="/2.jpg" alt="Kp=5">  </p>
+<p>�������뵼���е�ϵͳ��Ƚϻᷢ�ּ��������֮��ϵͳ������ȱ�С������ϵͳ�������������ʱ��Խ�̣���Ƶ�ʱ����Ӧ�ٶ�ҲԽ�졣����ϵͳ���ɴ��ڲ�С����̬������ļ�������֤��  </p>
+<p><img src="/3.jpg" alt="Alt text">  </p>
+<p>�ӽ�������Ǻ�����Կ�������Kp����ϵͳ��̬���Խ��ԽС�����仰˵��ֻҪKp�����㹻����ôϵͳ���յ�����϶�������趨ֵ�����������������������������������£���Kpȡ��ֵͬ�ķ�����  </p>
+<p>Kp &#x3D; 10</p>
+<p><img src="/image-10.png" alt="Alt text"></p>
+<p>kp &#x3D; 100</p>
+<p><img src="/image-11.png" alt="Alt text"> </p>
+<p>Kp &#x3D; 1000 </p>
+<p><img src="/image-12.png" alt="Alt text"> </p>
+<p>������3��ͼ���Կ�������Kp������Խ��Խ�ã�����Kp��������̬������ڱ�С������ϵͳ����Ҳ��֮����������Kp����1000ʱ��ϵͳ�ںܳ���ʱ���ڶ��ȶ����ˣ�һֱ�񵴡�̫����񵴶Ժܶ�ϵͳ��˵�ǲ������ܵģ���������㿪�����ϸ���ʱ������ѳ����ᵽ100KM&#x2F;h�����һ��������ȥֱ��쭵���500KM&#x2F;h����֮�����������ٵ�55KM&#x2F;h���⻹ԶԶû�������㽫�ںܳ�һ��ʱ����ά������״̬�����㳵�ܵ��ˣ��������粻���ˣ�  </p>
+<p>�ܽ᣺Kp����ϵͳ����̬�����С������Ӧʱ��Խ�죬�����ϵͳ������С���񵴡�����Ҫ�õ�һ���ڽ�С�����»�û����̬����ϵͳ����ô���أ�<br>�������˭�ڽ��ң���</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/06/15/PID%E7%AE%97%E6%B3%95d%E5%88%86%E4%BA%AB/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/06/10/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2023-06-10T02:21:00.970Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-06-10</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/06/10/hello-world/" class="archive-article-date">
-  	<time datetime="2023-06-10T02:16:40.376Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-06-10</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/06/10/hello-world/">Hello World</a>
-    </h1>
+  
+    <a href="/2023/06/10/PID%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -263,8 +370,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
