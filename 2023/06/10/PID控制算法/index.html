@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://github.com/singlechipWang/picgo/raw/main/image-11.png">
 <meta property="og:image" content="https://github.com/singlechipWang/picgo/raw/main/image-12.png">
 <meta property="article:published_time" content="2023-06-10T02:21:00.970Z">
-<meta property="article:modified_time" content="2023-06-24T09:49:48.895Z">
+<meta property="article:modified_time" content="2023-06-24T10:16:47.342Z">
 <meta property="article:author" content="array">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://github.com/singlechipWang/picgo/raw/main/image-6.png">
@@ -199,7 +199,8 @@
 <li>3.3 微分项（D）</li>
 <li>3.4 比例微分项（PI）<span id="more"></span></li>
 </ul>
-<h1 id="1-前言-1"><a href="#1-前言-1" class="headerlink" title="1. 前言"></a>1. 前言</h1><h1 id="2-导入-1"><a href="#2-导入-1" class="headerlink" title="2. 导入"></a>2. 导入</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">R：已知系统的设定值；</span><br><span class="line">X：系统的实际输出值；</span><br><span class="line">e：系统误差 = 设定值（R）-实际输出值（X）；</span><br><span class="line">Kp：比例增益；</span><br><span class="line">Ki：积分增益；</span><br><span class="line">Kv：微分增益</span><br></pre></td></tr></table></figure>
+<h1 id="1-前言-1"><a href="#1-前言-1" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>这是自己的第一篇博客，由于各种原因吧导致博客开通的这么晚，我觉得最主要的原因还是因为自己之前并没有认识到写博客的重要性！言归正传，最近自己也是在做一个四轴飞行器，跟之前做平衡车一样PID调参是一个绕不过去的问题，在看了一些书籍和视频后我想写一下自己的理解，相信这篇文章能让大家对PID算法有一个理性的认识。</p>
+<h1 id="2-导入-1"><a href="#2-导入-1" class="headerlink" title="2. 导入"></a>2. 导入</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">R：已知系统的设定值；</span><br><span class="line">X：系统的实际输出值；</span><br><span class="line">e：系统误差 = 设定值（R）-实际输出值（X）；</span><br><span class="line">Kp：比例增益；</span><br><span class="line">Ki：积分增益；</span><br><span class="line">Kv：微分增益</span><br></pre></td></tr></table></figure>
 <p>这里插播一条消息以便引出我们下面的仿真（simulink），先搭建一个二阶系统  </p>
 <p><img src="https://github.com/singlechipWang/picgo/raw/main/image-6.png">  </p>
 <p>下面是我们的仿真结果  </p>
@@ -219,11 +220,7 @@
 <p>从结果中我们好像可以看到随着Kp增大，系统稳态误差越来越小。换句话说，只要Kp给的足够大，那么系统最终的输出肯定会等于设定值，是这样吗？下面是在其余条件不变的情况下，对Kp取不同值的仿真结果<br>Kp &#x3D; 10<br><img src="https://github.com/singlechipWang/picgo/raw/main/image-10.png"><br>Kp &#x3D; 100<br><img src="https://github.com/singlechipWang/picgo/raw/main/image-11.png"><br>Kp &#x3D; 1000<br><img src="https://github.com/singlechipWang/picgo/raw/main/image-12.png">  </p>
 <p>从上面3个图可以看出来，Kp并不是越大越好，随着Kp的增大稳态误差是在变小，但是系统的振荡也随之增大。甚至当Kp增大到1000时，系统在很长的时间内都稳定不了，一直振荡。太大的振荡对很多系统来说是不能忍受的，你敢想象当你开车刚上高速时，你想把车速提到100KM&#x2F;h，结果一脚油门下去直接飙到了500KM&#x2F;h，而之后又立马减速到55KM&#x2F;h，这还远远没结束，你将在很长一段时间内维持这种状态。即便车受得了，估计人早不行了！  </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">总结：Kp增大系统的稳态误差会减小，且相应时间越快，但会给系统带来不小的振荡。而想要得到一个在较小的振荡下还没有稳态误差的系统该怎么办呢？</span><br><span class="line">积分项：“谁在叫我？”</span><br></pre></td></tr></table></figure>
-
-
-
-
-
+<p>最近在参加研电赛还有准备期末考试，等过了这段时间继续更新！！</p>
 
       
 
